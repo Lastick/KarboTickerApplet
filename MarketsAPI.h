@@ -30,9 +30,12 @@
 #ifndef MARKETSAPI_H_INCLUDED
 #define MARKETSAPI_H_INCLUDED
 
-struct Ticket {
+#define TICKERSMAX 16
+#define NAMELEN 12
+
+struct Ticker {
   unsigned int id;
-  char name[12];
+  char name[NAMELEN];
   double buy_active;
   double buy_effective;
   double sell_active;
@@ -45,19 +48,26 @@ class Markets {
     Markets();
     ~Markets();
     void doLoad();
+    bool getTickerByID(const unsigned int id);
+    bool getTickerByName(const char name[NAMELEN]);
     bool getStatus();
-    Ticket tickets[16];
+    unsigned int getTime();
+    Ticker ticker;
   private:
-    static size_t WriteMemoryCallback(void *contents, size_t size, size_t nmemb, void *userp);
-    void doErase();
-    char *client();
-    bool api_status;
-    bool res_status;
-    unsigned int time;
     struct MemoryStruct {
       char *memory;
       size_t size;
     };
+    static size_t WriteMemoryCallback(void *contents, size_t size, size_t nmemb, void *userp);
+    void doEraseTickers();
+    void doEraseTicker();
+    static const char user_agent[];
+    static const char api_host[];
+    char *client();
+    bool api_status;
+    bool res_status;
+    unsigned int time;
+    Ticker tickers[TICKERSMAX];
 };
 
 #endif // MARKETSAPI_H_INCLUDED

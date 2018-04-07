@@ -45,19 +45,16 @@ static gint update_lable_applet(gpointer label){
   markets.doLoad();
   memset(result, 0, 64);
   if (markets.getStatus()){
-    for (unsigned int n = 0; n < 16; n++){
-      if (strcmp(markets.tickets[n].name, target_pair) == 0){
-        memset(buffer, 0, 16);
-        strcat(result, target_pair);
-        strcat(result, sub_a);
-        sprintf(buffer, "%.4f", markets.tickets[n].sell_active);
-        strcat(result, buffer);
-        memset(buffer, 0, 16);
-        strcat(result, sep);
-        sprintf(buffer, "%.4f", markets.tickets[n].buy_active);
-        strcat(result, buffer);
-        break;
-      }
+    if (markets.getTickerByName(target_pair)){
+      memset(buffer, 0, 16);
+      strcat(result, target_pair);
+      strcat(result, sub_a);
+      sprintf(buffer, "%.4f", markets.ticker.sell_active);
+      strcat(result, buffer);
+      memset(buffer, 0, 16);
+      strcat(result, sep);
+      sprintf(buffer, "%.4f", markets.ticker.buy_active);
+      strcat(result, buffer);
     }
   }
   gtk_label_set_text(GTK_LABEL(label), result);
@@ -96,8 +93,7 @@ static gboolean karbo_ticker_applet_fill(PanelApplet *applet, const gchar *iid, 
     return FALSE;
   }
   panel_applet_setup_menu(applet, Context_menu_xml, applet_menu_verbs, applet);
-  label = gtk_label_new("Test");
-  gtk_label_set_text(GTK_LABEL(label), "Init...");
+  label = gtk_label_new("Loading...");
   gtk_container_add(GTK_CONTAINER(applet), label);
   gtk_widget_show_all(GTK_WIDGET(applet));
   gtk_timeout_add(10000, update_lable_applet, label);
