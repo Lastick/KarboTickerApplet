@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="karbo-markets-applet" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/karbo-markets-applet" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/karbo-markets-applet" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add option="-I/usr/include/panel-2.0" />
+			<Add option="-I/usr/include/gtk-2.0" />
+			<Add option="-I/usr/include/libbonobo-2.0" />
+			<Add option="-I/usr/include/libbonoboui-2.0" />
+			<Add option="-I/usr/include/bonobo-activation-2.0" />
+			<Add option="-I/usr/include/cairo" />
+			<Add option="-I/usr/include/pango-1.0" />
+			<Add option="-I/usr/include/atk-1.0" />
+			<Add option="-I/usr/include/orbit-2.0" />
+			<Add option="-I/usr/include/glib-2.0" />
+			<Add option="-I/usr/lib/gtk-2.0/include" />
+			<Add option="-I/usr/lib/glib-2.0/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-lcurl" />
+			<Add option="-ljansson" />
+			<Add option="-lgtk-x11-2.0" />
+			<Add option="-lpanel-applet-2" />
+			<Add option="-pthread" />
+		</Linker>
+		<Unit filename="MarketsAPI.cpp" />
+		<Unit filename="MarketsAPI.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
