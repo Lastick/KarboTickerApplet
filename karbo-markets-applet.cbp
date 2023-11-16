@@ -38,9 +38,7 @@
 		<Linker>
 			<Add option="-lcurl" />
 			<Add option="-ljansson" />
-			<Add option="-lgtk-x11-2.0" />
 			<Add option="-lpanel-applet-2" />
-			<Add option="-pthread" />
 		</Linker>
 		<Unit filename="MarketsAPI.cpp" />
 		<Unit filename="MarketsAPI.h" />
