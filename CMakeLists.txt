@@ -18,3 +18,6 @@ add_executable(${CMAKE_PROJECT_NAME} MarketsAPI.h MarketsAPI.cpp main.cpp)
 
 target_link_libraries(${CMAKE_PROJECT_NAME} ${LIBCURL_LIBRARIES} ${LIBJANSSON_LIBRARIES} ${LIBPANELAPPLE_LIBRARIES})
 
+install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME} DESTINATION lib/bonobo/servers)
+install(FILES KarboTickerApplet.server DESTINATION lib/KarboTickerApplet)
+
