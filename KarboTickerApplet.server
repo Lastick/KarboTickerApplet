@@ -1,6 +1,6 @@
 <oaf_info>
 
-  <oaf_server iid='OAFIID:KarboTickerApplet_Factory' type='exe' location='/usr/lib/KarboTickerApplet/KarboTickerApplet'>
+  <oaf_server iid='OAFIID:KarboTickerApplet_Factory' type='exe' location='/usr/lib/gnome-applets/KarboTickerApplet'>
     <oaf_attribute name='repo_ids' type='stringv'>
       <item value='IDL:Bonobo/GenericFactory:1.0' />
       <item value='IDL:Bonobo/Unknown:1.0' />
