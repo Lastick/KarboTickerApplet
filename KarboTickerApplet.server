@@ -19,7 +19,7 @@
     <oaf_attribute name='name-ru' type='string' value='KarboTickerApplet' />
     <oaf_attribute name='description' type='string' value='Exchange rate KRB/UAH' />
     <oaf_attribute name='panel:category' type='string' value='Utility' />
-    <oaf_attribute name='panel:icon' type='string' value='computer.png' />
+    <oaf_attribute name='panel:icon' type='string' value='gnome-info' />
   </oaf_server>
 
 </oaf_info>
