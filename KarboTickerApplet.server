@@ -6,7 +6,7 @@
       <item value='IDL:Bonobo/Unknown:1.0' />
     </oaf_attribute>
     <oaf_attribute name='name' type='string' value='KarboTickerApplet' />
-    <oaf_attribute name='description' type='string' value='Show your karma and ratio' />
+    <oaf_attribute name='description' type='string' value='Exchange rate KRB/UAH' />
   </oaf_server>
 
   <oaf_server iid='OAFIID:KarboTickerApplet' type='factory' location='OAFIID:KarboTickerApplet_Factory'>
@@ -17,8 +17,7 @@
     </oaf_attribute>
     <oaf_attribute name='name' type='string' value='KarboTickerApplet' />
     <oaf_attribute name='name-ru' type='string' value='KarboTickerApplet' />
-    <oaf_attribute name='description' type='string' value='Show your karma and ratio' />
-    <oaf_attribute name='description-ru' type='string' value='Курс валют криптовалюты Karbo' />
+    <oaf_attribute name='description' type='string' value='Exchange rate KRB/UAH' />
     <oaf_attribute name='panel:category' type='string' value='Utility' />
     <oaf_attribute name='panel:icon' type='string' value='computer.png' />
   </oaf_server>
