@@ -31,18 +31,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add option="-I/usr/include/panel-2.0" />
-			<Add option="-I/usr/include/gtk-2.0" />
-			<Add option="-I/usr/include/libbonobo-2.0" />
-			<Add option="-I/usr/include/libbonoboui-2.0" />
-			<Add option="-I/usr/include/bonobo-activation-2.0" />
-			<Add option="-I/usr/include/cairo" />
-			<Add option="-I/usr/include/pango-1.0" />
-			<Add option="-I/usr/include/atk-1.0" />
-			<Add option="-I/usr/include/orbit-2.0" />
-			<Add option="-I/usr/include/glib-2.0" />
-			<Add option="-I/usr/lib/gtk-2.0/include" />
-			<Add option="-I/usr/lib/glib-2.0/include" />
+			<Add option="`pkg-config libcurl --cflags`" />
+			<Add option="`pkg-config jansson --cflags`" />
+			<Add option="`pkg-config libpanelapplet-2.0 --cflags`" />
 		</Compiler>
 		<Linker>
 			<Add option="-lcurl" />
