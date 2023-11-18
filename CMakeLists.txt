@@ -20,4 +20,5 @@ target_link_libraries(${CMAKE_PROJECT_NAME} ${LIBCURL_LIBRARIES} ${LIBJANSSON_LI
 
 install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME} DESTINATION lib/gnome-applets)
 install(FILES KarboTickerApplet.server DESTINATION lib/bonobo/servers)
+install(FILES LICENSE DESTINATION share/doc/${CMAKE_PROJECT_NAME})
 
